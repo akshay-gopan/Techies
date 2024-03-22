@@ -1,0 +1,25 @@
+body {
+  background-color: rgba(0, 0, 0, 0.816);
+}
+
+.nav-link {
+  color: #ffc107;
+}
+.nav-link:hover {
+  color: whitesmoke;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  width: 100%;
+}
+
+.span {
+  color: white;
+}
+.card-body {
+  background-color: whitesmoke;
+  text-align: center;
+}

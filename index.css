@@ -226,7 +226,7 @@ body {
     right: 0;
     top: 0;
     bottom: 0;
-    background: rgba(26, 46, 64, 0.85);
+    background: rgba(0, 0, 0, 0.816);
     z-index: 1;
   }
   
@@ -260,7 +260,7 @@ body {
     padding: 6px 10px;
     position: relative;
     border-radius: 50px;
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.816);
     text-align: left;
   }
   
@@ -290,10 +290,8 @@ body {
     background: #fcb102;
   }
   
-  
-  
   #footer .footer-bottom {
-    border-top: 1px solid #1a2e40;
+    border-top: 1px solid  rgba(0, 0, 0, 0.816);
     z-index: 2;
     position: relative;
     padding-top: 40px;

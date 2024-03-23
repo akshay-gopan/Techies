@@ -216,9 +216,11 @@ contract.methods.isHUIDCorresponding(aadhar1, huid).call().then(function(result)
 
     if (result) {
         console.log("Authentication Result: Authentication successful");
+        alert("Verification successful");
         window.location.href="approval.html";
     } else {
         console.log("Authentication Result: Verification failed");
+        alert("Verification failed:HUID does not belong to the given Aadhaar number");
     }
 }).catch(function(error) {
 console.error("Error:", error);
@@ -238,7 +240,7 @@ function addHUID() {
         contract.methods.addHUID(aadharNumber, huid2).send({ from: userAccount })
         .then(function () {
             console.log("HUID added successfully");
-            document.getElementById('message').innerHTML = "New HUID added successfully";
+            alert("HUID added succesfully")
 
         })
         .catch(function (error) {

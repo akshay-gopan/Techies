@@ -30,7 +30,7 @@
     </div>
     
 <script>
-    // Define the contract address and ABI
+
 const contractAddress = "0xDC62A8BcA6AB1bA73538f35A885D84ec4dC60116";
 const abi = [
 	{
@@ -175,23 +175,15 @@ const abi = [
 web3 = new Web3(web3.currentProvider);
 
 var contract = new web3.eth.Contract(abi, contractAddress);
-
-// Handle form submission
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault();
-    
-    // Get the input values
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
 
     try {
-        // Call the contract function to validate ID and password
         const result = await contract.methods.validateIDAndPassword(username, password).call();
-        
-        // Handle the result
         if (result) {
             alert("Login successful!");
-            // Redirect to another page
             window.location.href = "choice.html";
         } else {
             alert("Invalid username or password. Please try again.");

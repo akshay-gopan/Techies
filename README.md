@@ -42,6 +42,8 @@ CSS3 <br>
 Javascript <br>
 Bootstrap v5.3 <br>
 Solidity v6.6 <br>
+Swiper <br>
+Glightbox
 
 
 ## How to configure
@@ -56,4 +58,6 @@ Use a text editor like Visual Studio Code, Sublime Text, or Atom to open the fol
 Open and run the `index.html` file.
 
 ## How to contribute ? 
-Features to implement 
+1. Extend the platform's capabilities to support **cross-border trading** of gold assets, integrating with global marketplaces and complying with international regulations.
+2. Implement **data analytics tools** to analyze trends, patterns, and user behavior within the gold exchange platform, offering valuable insights for decision-making and optimization.
+3. Explore the use of **artificial intelligence (AI) algorithms** to automate and improve the accuracy of gold purity assessment, providing real-time results to users.

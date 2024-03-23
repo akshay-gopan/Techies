@@ -27,7 +27,6 @@
             </li>
             <li class="nav-item"><a href="new_reg.html" class="nav-link">Register</a></li>
             <li class="nav-item"><a href="owner_trans.html" class="nav-link">Ownership</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
           </ul>
         </header>
       </div>
@@ -68,7 +67,12 @@
                     <label for="newAadhaar">Aadhaar No</label>
                     <input type="text" id="newAadhaar" name="newAadhaar" required>
                   </div>
-                  
+                  <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p id="modalMessage"></p>
+                    </div>
+                </div>
                 </form>
               </div>
                <div class="col-md-1"></div> 
@@ -76,7 +80,26 @@
            <div class="ver-btn">
             <button onclick="updateAadhar()" type="submit"><span>Procced to Aadhaar Verification</span></button>
            </div>
-           
+           <script>
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            
+            function openModal(message) {
+                document.getElementById("modalMessage").innerText = message;
+                modal.style.display = "block";
+            }
+            
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            
+            </script>
            <script src="../functions.js"></script>
            
 </body>

@@ -236,6 +236,7 @@ function addHUID() {
         .then(function () {
             console.log("HUID added successfully");
             document.getElementById('message').innerHTML = "HUID added successfully";
+            openModal("Ownership Transferred Succesfully");
             // Optionally, you can update the UI or perform other actions after adding the HUID
         })
         .catch(function (error) {

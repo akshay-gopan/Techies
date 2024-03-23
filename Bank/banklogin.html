@@ -162,25 +162,18 @@ const abi = [
 	}
 ];
 
-// Initialize contract instance
-var contract = new web3.eth.Contract(abi, contractAddress);
 
-// Handle form submission
+var contract = new web3.eth.Contract(abi, contractAddress);
 document.getElementById("loginForm").addEventListener("submit", async function(event) {
     event.preventDefault();
-    
-    // Get the input values
     const bankID = document.getElementById("id").value;
     const password = document.getElementById("password").value;
 
     try {
-        // Call the contract function to validate ID and password
-        const result = await contract.methods.validateIDAndPassword(bankID, password).call();
         
-        // Handle the result
+        const result = await contract.methods.validateIDAndPassword(bankID, password).call();
         if (result) {
             alert("Login successful!");
-            // Redirect to another page or perform any other action
             window.location.href = "bankhome.html"
         } else {
             alert("Invalid ID or password. Please try again.");

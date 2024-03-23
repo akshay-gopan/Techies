@@ -15,6 +15,19 @@ img {
     height: auto;
     margin-top: 20px;
 }
+.home-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #ffc107;
+    color: whitesmoke;
+    font-size: 18px;
+    margin: 5;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    transition: background-color 0.3s;
+}
 
 form {
     max-width: 600px;

@@ -235,8 +235,7 @@ function addHUID() {
         contract.methods.addHUID(aadharNumber, huid2).send({ from: userAccount })
         .then(function () {
             console.log("HUID added successfully");
-            document.getElementById('message').innerHTML = "HUID added successfully";
-            openModal("Ownership Transferred Succesfully");
+            document.getElementById('message').innerHTML = "New HUID added successfully";
             // Optionally, you can update the UI or perform other actions after adding the HUID
         })
         .catch(function (error) {

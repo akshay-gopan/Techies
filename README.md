@@ -53,7 +53,7 @@ If you prefer to download as a ZIP file, click on the "Code" button on the repos
 Use a text editor like Visual Studio Code, Sublime Text, or Atom to open the folder.
 
 ## How to Run
-Instructions for running
+Open and run the `index.html` file.
 
 ## How to contribute ? 
 Features to implement 

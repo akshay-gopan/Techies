@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ownership Transfer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="owner_trans.css">
 </head>
 <body>
@@ -36,16 +38,16 @@
                 <h2>Current Owner</h2>
                 <form>
                   <div class="form-group">
-                    <label for="username">Name</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="currentOwnerName">Name</label>
+                    <input type="text" id="currentOwnerName" name="currentOwnerName" required>
                   </div>
                   <div class="form-group">
-                    <label for="password">Aadhaar No</label>
-                    <input type="text" id="password" name="password" required>
+                    <label for="currentOwnerAadhaar">Aadhaar No</label>
+                    <input type="text" id="currentOwnerAadhaar" name="currentOwnerAadhaar" required>
                   </div>
                   <div class="form-group">
-                    <label for="username">HUID</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="currentOwnerHUID">HUID</label>
+                    <input type="text" id="currentOwnerHUID" name="currentOwnerHUID" required>
                   </div>
                   
                 </form>
@@ -59,12 +61,12 @@
                 <h2>New Owner</h2>
                 <form>
                   <div class="form-group">
-                    <label for="username">Name</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="newOwnerName">Name</label>
+                    <input type="text" id="newOwnerName" name="newOwnerName" required>
                   </div>
                   <div class="form-group">
-                    <label for="password">Aadhaar No</label>
-                    <input type="password" id="password" name="password" required>
+                    <label for="newAadhaar">Aadhaar No</label>
+                    <input type="text" id="newAadhaar" name="newAadhaar" required>
                   </div>
                   
                 </form>
@@ -72,7 +74,10 @@
                <div class="col-md-1"></div> 
            </div>
            <div class="ver-btn">
-            <button type="submit"><span>Procced to Aadhaar Verification</span></button>
+            <button onclick="updateAadhar()" type="submit"><span>Procced to Aadhaar Verification</span></button>
            </div>
+           
+           <script src="../functions.js"></script>
+           
 </body>
 </html>

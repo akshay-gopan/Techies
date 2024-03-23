@@ -226,18 +226,16 @@ function addHUID() {
     var huid2 = $('#huidIn').val();
     var aadharNumber = parseInt(aadhar2);
     
-    // Request access to user's Ethereum accounts
     ethereum.request({ method: 'eth_requestAccounts' })
     .then(function(accounts) {
-        userAccount = accounts[0]; // Get the first account from MetaMask
+        userAccount = accounts[0]; 
         
-        // Send transaction using the user's account address
+
         contract.methods.addHUID(aadharNumber, huid2).send({ from: userAccount })
         .then(function () {
             console.log("HUID added successfully");
-            document.getElementById('message').innerHTML = "HUID added successfully";
-            openModal("Ownership Transferred Succesfully");
-            // Optionally, you can update the UI or perform other actions after adding the HUID
+            document.getElementById('message').innerHTML = "New HUID added successfully";
+
         })
         .catch(function (error) {
             console.error("Error:", error);
@@ -255,17 +253,16 @@ function updateAadhar(aadharN, Ownerhuid) {
     var newOwnerName = $('#newOwnerName').val();
     var newAadhaar = $('#newAadhaar').val();
     var aadharN= parseInt(newAadhaar);
-    // Request access to user's Ethereum accounts
+
     ethereum.request({ method: 'eth_requestAccounts' })
     .then(function(accounts) {
-        userAccount = accounts[0]; // Get the first account from MetaMask
-        
-        // Send transaction using the user's account address
+        userAccount = accounts[0]; 
+ 
         contract.methods.updateAadhar(aadharN, Ownerhuid).send({ from: userAccount })
         .then(function () {
             console.log("Aadhar updated successfully");
             openModal("Ownership Transferred Succesfully");
-            // Optionally, you can update the UI or perform other actions after updating the Aadhar
+    
         })
 
         

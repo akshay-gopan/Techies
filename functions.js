@@ -214,8 +214,12 @@ var huid = $('#huidInput').val();
 
 contract.methods.isHUIDCorresponding(aadhar1, huid).call().then(function(result) {
 
-$('#result').html("Authentication Result: " + result);
-console.log("Authentication Result:", result);
+    if (result) {
+        console.log("Authentication Result: Authentication successful");
+        window.location.href="approval.html";
+    } else {
+        console.log("Authentication Result: Verification failed");
+    }
 }).catch(function(error) {
 console.error("Error:", error);
 });

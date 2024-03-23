@@ -8,7 +8,8 @@
 Techies
 
 ## Idea
-Breif Idea in two three sentences 
+We are proposing a new system for gold exchange in India. The proposed system is an end-to-end digital process anchored on linking Aadhar IDs and Hallmark Unique Identification number(HUID).
+Our system prioritizes security through advanced encryption and blockchain technology, ensuring airtight protection for all transactions and data. Additionally, we emphasize transparency by providing users with clear visibility into ownership verification and purity assessment processes, fostering trust and reliability in the gold exchange ecosystem.
 
 ## Features 
 1. 
@@ -18,7 +19,11 @@ Breif Idea in two three sentences
 
    
 ## Libraries used
-Library Name - Version
+HTML5
+CSS3
+Javascript
+Bootstrap v5.3
+Solidity 
 
 
 ## How to configure

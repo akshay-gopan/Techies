@@ -279,7 +279,7 @@ body {
     background: none;
     font-size: 16px;
     padding: 0 20px;
-    background: #fdc134;
+    background: #fcb102;
     color: #fff;
     transition: 0.3s;
     border-radius: 50px;
@@ -307,6 +307,10 @@ body {
     float: right;
     text-align: center;
     font-size: 13px;
+  }
+
+  #footer .credits a{
+    color: #fcb102;
   }
   
   

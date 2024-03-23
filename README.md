@@ -37,11 +37,11 @@ Our system prioritizes security through advanced encryption and blockchain techn
 
    
 ## Languages and Libraries used
-HTML5
-CSS3
-Javascript
-Bootstrap v5.3
-Solidity 
+HTML5 <br>
+CSS3 <br>
+Javascript <br>
+Bootstrap v5.3 <br>
+Solidity v6.6 <br>
 
 
 ## How to configure

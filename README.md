@@ -45,7 +45,10 @@ Solidity
 
 
 ## How to configure
-Instructions for setting up project
+Clone or Download Repository:
+
+If you're using Git, clone the repository to your local machine using the command `git clone` <repository-url>.
+If you prefer to download as a ZIP file, click on the "Code" button on the repository's GitHub page and select "Download ZIP". Extract the downloaded ZIP file to a folder on your computer.
 
 ## How to Run
 Instructions for running

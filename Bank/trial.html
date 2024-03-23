@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="banklogincss.css">
+    
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Bank Login</h2>
+    <form action="verify-login.php" method="post">
+        <input type="text" name="id" placeholder="ID" required>
+        <input type="password" name="password" placeholder="Password" required>
+        
+        <button type="button" onclick="login()">Login</button>
+        </a>
+    </form>
+</div>
+<script>
+    var web3;
+    var contract;
+    console.log("Connected to Ethereum");
+
+    $(document).ready(function() {
+        web3 = new Web3(web3.currentProvider);
+        const contractAddress = "0x0cD84bFB04Ba89e0fB11a6535e4D319a20914B18"
+        const contractABI = [
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "bankAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "bankID",
+				"type": "string"
+			}
+		],
+		"name": "BankRegistered",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_bankID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_password",
+				"type": "string"
+			}
+		],
+		"name": "registerBank",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "banks",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "bankID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "password",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "registered",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_bankID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_password",
+				"type": "string"
+			}
+		],
+		"name": "verifyBank",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+
+        // Instantiate the contract object
+         contract = new web3.eth.Contract(contractABI, contractAddress);
+    });
+
+    // Function to handle form submission
+    async function login() {
+        // Retrieve input values
+        var bankID = document.getElementsByName("id")[0].value;
+        var password = document.getElementsByName("password")[0].value;
+        console.log(bankID, password)
+
+        try {
+            // Call the verifyBank function of the contract
+            const isVerified = await contract.methods.verifyBank(bankID, password).call();
+
+            if (isVerified) {
+                // Redirect to bank home page if verification succeeds
+                window.location.href = "bankhome.html";
+                
+            } else {
+                // Display error message if verification fails
+                alert("Invalid bank ID or password.");
+            }
+        } catch (error) {
+            // Handle errors
+            console.error("Error:", error);
+            alert("An error occurred. Please try again later.");
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -28,12 +28,12 @@ Our system prioritizes security through advanced encryption and blockchain techn
 
 8. **Efficient Gold Exchange:** The system streamlines the exchange of gold assets from jewellery, making transactions quicker and more efficient.
 
-9. **Web3 Technologies Integration:** Mention the integration of Web3 technologies like blockchain, HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, React, Express, Node.js, MongoDB, and Firebase for a robust and modern platform.
+9. **Web3 Technologies Integration:** The system is built on Ethereum blockchain.
 
-10. **Trustworthy Environment:** Communicate the project's goal of building a trustworthy and transparent environment for handling gold, ensuring a reliable platform for all stakeholders.
+10. **Trustworthy Environment:** The system creates a trustworthy and transparent environment for handling gold, ensuring a reliable platform for all stakeholders.
 
 ## Link to product walkthrough
-[link to video](Link Here)
+[link to video](https://drive.google.com/file/d/1X47qZ2o_Id4RXCxzAxqHKkwTTW_uU17V/view?usp=sharing)
 
    
 ## Languages and Libraries used

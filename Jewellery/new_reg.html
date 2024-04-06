@@ -40,10 +40,22 @@
                 <label for="huidIn">HUID:</label>
                 <input type="text" id="huidIn" name="huidIn" required>
               </div>
-              <button onclick="addHUID()" >Add new HUID</button>
+              <div class="form-group" id="formotp" style="display: none;">
+                <label for="otp">Enter OPT:</label>
+                <input type="text" id="otp" required>
+              </div>
+              <button id="sentotp" onclick="sendotp()">Send OTP</button>
+              <button id="addhuidbtn" onclick="addHUID()" style="display: none;">Add HUID</button>
           </div>
        </div>
+       <script>
+        function sendotp(){
+          document.getElementById("sentotp").style.display = "none";
+          document.getElementById("formotp").style.display = "block";
+          document.getElementById("addhuidbtn").style.display = "block";
 
+        }
+       </script>
        <script src="../functions.js"></script>
        
 </body>
